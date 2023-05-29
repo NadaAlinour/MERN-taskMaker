@@ -1,7 +1,7 @@
 # MERN-taskMaker
 Add task, delete task and view tasks from database.
 
-To add:
+To-add:
 - Sync UI with database using context to immediately see task changes
 - Add an "isCompleted" property in model to render completed tasks accordingly
 - Add authentication
