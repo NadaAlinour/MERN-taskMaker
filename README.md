@@ -6,6 +6,7 @@ To-add:
 - Add an "isCompleted" property in model to render completed tasks accordingly
 - Add authentication
 - Add different theme option
+- Error messages
 
 Preview:
 
