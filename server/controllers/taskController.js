@@ -36,10 +36,29 @@ const createTask = async (req, res) => {
   }
 };
 
+// edit a single task
+const editTask = async (req, res) => {
+  const { id } = req.params;
+
+  if (!mongoose.Types.ObjectId.isValid(id))
+    return res.status(400).json({ error: "no such task" });
+
+  const task = await Task.findOneAndUpdate(
+    { _id: id },
+    {
+      ...req.body,
+    }
+  );
+
+  if (!task) return res.status(400).json({ error: "no such task" });
+
+  res.status(200).json(task); // task is the original task before patching
+};
+
 // delete all tasks (add an r u sure thingy)
 const deleteTasks = async (req, res) => {
-  res.json({message: 'deleting all tasks but dunno how yet'});
-}; 
+  res.json({ message: "deleting all tasks but dunno how yet" });
+};
 
 // delete a single task
 const deleteTask = async (req, res) => {
@@ -55,4 +74,11 @@ const deleteTask = async (req, res) => {
   res.status(200).json(task);
 };
 
-module.exports = { getTasks, getTask, createTask, deleteTasks, deleteTask };
+module.exports = {
+  getTasks,
+  getTask,
+  createTask,
+  editTask,
+  deleteTasks,
+  deleteTask,
+};

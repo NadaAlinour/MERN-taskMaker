@@ -23,6 +23,7 @@ body {
   width: 50%;
   height: 80px;
   margin: auto;
+  margin-bottom: 15px;
   background-color: rgb(71, 71, 71);
   border-radius: 10px;
   display: flex;
@@ -54,8 +55,8 @@ body {
   width: 50%;
   min-height: 100px;
   margin: auto;
-  margin-top: 15px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  
   background-color: rgb(71, 71, 71);
   border-radius: 10px;
   padding: 5px;
