@@ -3,7 +3,7 @@ Add task, delete task and view tasks from database.
 
 To-add:
 - Sync UI with database using context to immediately see task changes
-- Add an "isCompleted" property in model to render completed tasks accordingly
+- Add an "isCompleted" property in model to render completed tasks accordingly (patch)
 - Add authentication
 - Add different theme option
 - Error messages
