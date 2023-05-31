@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { useTasksContext } from "../hooks/useTasksContext";
 
 const TaskForm = () => {
+  const {dispatch} = useTasksContext();
+
   const [form, setForm] = useState({
     name: "",
     description: "",
@@ -24,6 +27,7 @@ const TaskForm = () => {
       console.log(json.error);
     }
     if (response.ok) {
+      dispatch({type: 'CREATE_TASK', payload: json});
       // reset form
       setForm({
         name: "",

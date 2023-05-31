@@ -43,6 +43,7 @@ const editTask = async (req, res) => {
   if (!mongoose.Types.ObjectId.isValid(id))
     return res.status(400).json({ error: "no such task" });
 
+  // task is the original task before patching
   const task = await Task.findOneAndUpdate(
     { _id: id },
     {
@@ -50,9 +51,11 @@ const editTask = async (req, res) => {
     }
   );
 
+  const updatedTask = await Task.findById({_id: id});
+
   if (!task) return res.status(400).json({ error: "no such task" });
 
-  res.status(200).json(task); // task is the original task before patching
+  res.status(200).json(updatedTask); 
 };
 
 // delete all tasks (add an r u sure thingy)

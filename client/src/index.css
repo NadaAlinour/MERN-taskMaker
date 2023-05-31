@@ -74,8 +74,8 @@ body {
   font-style: italic;
 }
 
-.strikethrough-p {
-  font-style: italic;
+/* mark task as completed */
+.completed {
   text-decoration: line-through;
 }
 
