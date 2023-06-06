@@ -1,5 +1,4 @@
 const express = require("express");
-const router = express.Router();
 const {
   getTasks,
   getTask,
@@ -8,6 +7,14 @@ const {
   deleteTasks,
   deleteTask,
 } = require("../controllers/taskController");
+
+const requireAuth = require('../middleware/requireAuth')
+
+const router = express.Router();
+
+// protecting following routes by authorization
+router.use(requireAuth);
+
 // GET all tasks
 router.get("/", getTasks);
 

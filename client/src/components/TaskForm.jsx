@@ -1,16 +1,24 @@
 import { useState } from "react";
 import { useTasksContext } from "../hooks/useTasksContext";
+import { useAuthContext } from "../hooks/useAuthContext";
 
 const TaskForm = () => {
-  const {dispatch} = useTasksContext();
-
+  const { dispatch } = useTasksContext();
+  const { user } = useAuthContext();
   const [form, setForm] = useState({
     name: "",
     description: "",
   });
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!user) {
+      console.log("user must be logged in");
+      return;
+    }
+
     const { name, description } = form;
     const task = { name, description };
     const response = await fetch("http://localhost:4000/api/tasks", {
@@ -18,6 +26,7 @@ const TaskForm = () => {
       body: JSON.stringify(task),
       headers: {
         "Content-Type": "application/json",
+        Authorization: `Bearer ${user.token}`,
       },
     });
 
@@ -27,7 +36,7 @@ const TaskForm = () => {
       console.log(json.error);
     }
     if (response.ok) {
-      dispatch({type: 'CREATE_TASK', payload: json});
+      dispatch({ type: "CREATE_TASK", payload: json });
       // reset form
       setForm({
         name: "",
