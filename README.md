@@ -1,14 +1,14 @@
 # MERN-taskMaker
-Add, delete, mark and view tasks.
-
-**To-add:**
-- ~~Sync UI with database using context to immediately see task changes.~~
-- ~~Add an "isCompleted" key to schema and render completed tasks accordingly + PATCH method to update task in the database.~~
-- Add authentication.
-- Add different theme option.
-- Error messages.
+Create an account to add, delete, mark and view your own tasks.
 
 Preview:
 
-![image](https://github.com/NadaAlinour/MERN-taskMaker/assets/48387157/4bab2a98-7908-4096-80a3-4fb595bd7d6d)
+![image](https://github.com/NadaAlinour/MERN-taskMaker/assets/48387157/1b26e643-4923-4e93-ad77-5ad95d465022)
+
+
+![image](https://github.com/NadaAlinour/MERN-taskMaker/assets/48387157/2b7cd7c5-7dc3-4697-bf90-3d7b9b05f15b)
+
+
+![image](https://github.com/NadaAlinour/MERN-taskMaker/assets/48387157/896cae84-7ff8-457c-94c7-cdff1f23b450)
+
 
