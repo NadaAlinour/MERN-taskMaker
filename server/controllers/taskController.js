@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 // get all tasks
 const getTasks = async (req, res) => {
-  const tasks = await Task.find({}).sort({ createdAt: -1 });
+  const tasks = await Task.find({user_id: req.user._id}).sort({ createdAt: -1 });
   res.status(200).json(tasks);
 };
 
@@ -23,12 +23,13 @@ const getTask = async (req, res) => {
 
 const createTask = async (req, res) => {
   const { name, description } = req.body;
-
+  const user_id = req.user._id;
   // add doc to db
   try {
     const task = await Task.create({
       name,
       description,
+      user_id
     });
     res.status(200).json(task);
   } catch (error) {
