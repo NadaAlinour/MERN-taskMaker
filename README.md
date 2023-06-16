@@ -3,12 +3,16 @@ Create an account to add, delete, mark and view your own tasks.
 
 Preview:
 
-![image](https://github.com/NadaAlinour/MERN-taskMaker/assets/48387157/1b26e643-4923-4e93-ad77-5ad95d465022)
+![image](https://github.com/NadaAlinour/MERN-taskMaker/assets/48387157/58b05d02-eb7f-433c-96ac-50920dab661e)
 
 
-![image](https://github.com/NadaAlinour/MERN-taskMaker/assets/48387157/2b7cd7c5-7dc3-4697-bf90-3d7b9b05f15b)
+
+![image](https://github.com/NadaAlinour/MERN-taskMaker/assets/48387157/f1b42e6d-a04a-46b1-a563-5a611a282548)
 
 
-![image](https://github.com/NadaAlinour/MERN-taskMaker/assets/48387157/896cae84-7ff8-457c-94c7-cdff1f23b450)
+
+![image](https://github.com/NadaAlinour/MERN-taskMaker/assets/48387157/46f88632-67e3-40bd-bdfe-be17465fb3f9)
+
+
 
 
